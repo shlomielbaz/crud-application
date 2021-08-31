@@ -1,7 +1,7 @@
 
 
 # CRUD APP
-CRUD operation example rely on C# (server side) and Angular (client side). <br />
+CRUD operation example C# server side and Angular (client side). <br />
 This sample use entity framework for SQLITE database, the DB includes in the code, the DB file can be found in folder EA.Data/Database/database.db <br /><br />
 
 ### Client APP

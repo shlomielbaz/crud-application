@@ -1,0 +1,50 @@
+<div class="p-fluid p-formgrid grid">
+
+    <div class="field col-12">
+        <label for="el-firstname">First Name</label>
+        <input id="el-firstname" type="text" pInputText [(ngModel)]="user.firstName" />
+    </div>
+
+    <div class="field col-12">
+        <label for="el-lastname">Last Name</label>
+        <input id="el-lastname" type="text" pInputText [(ngModel)]="user.lastName" />
+    </div>
+
+    <div class="field col-12">
+        <label for="el-email">Email</label>
+        <input id="el-email" type="text" pInputText [(ngModel)]="user.email" />
+    </div>
+
+    <div class="field col-12">
+        <label for="el-address">Address</label>
+        <textarea id="el-address" type="text" rows="4" pInputTextarea [(ngModel)]="user.address"></textarea>
+    </div>
+
+    <div class="field col-12">
+        <label for="el-city">City</label>
+        <input id="el-city" type="text" pInputText [(ngModel)]="user.city" />
+    </div>
+
+    <div class="field col-12">
+        <label for="el-state">State</label>
+        <p-dropdown inputId="el-state" [options]="states" [(ngModel)]="user.state" placeholder="Select State"
+            optionLabel="name"></p-dropdown>
+    </div>
+
+    <div class="field col-12">
+        <label for="el-zip">Zip</label>
+        <input id="el-zip" type="text" pInputText [(ngModel)]="user.zip" />
+    </div>
+
+
+    <div class="col-12">
+        <div class="formgroup-inline">
+            <div class="field">
+                <button pButton pRipple type="button" label="Save" (click)="save()" *ngIf="mode == 'new'"></button>
+                <button pButton pRipple type="button" label="Save" (click)="update()" *ngIf="mode == 'edit'"></button>
+            </div>
+            <div class="field">
+                <button pButton pRipple type="button" label="Back" class="p-button-secondary" [routerLink]="['list']"></button>
+            </div>
+        </div>
+    </div>

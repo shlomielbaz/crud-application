@@ -1,0 +1,26 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="col-10 col-offset-1">
+      <div class="grid">
+        <div class="col-2"><a class="navbar-brand" [routerLink]="['/']">EA.Web</a></div>
+        <div class="col-8" style="display: flex; flex-direction: row; justify-content: center;">
+          <ul class="navbar-nav flex-grow">
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/home']">Home</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Fetch data</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/users']">Users</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+
+
+    </div>
+  </nav>
+</header>

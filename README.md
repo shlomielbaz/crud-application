@@ -4,10 +4,15 @@
 CRUD operation example rely on C# (server side) and Angular (client side). <br />
 This sample use entity framework for SQLITE database, the DB includes in the code, the DB file can be found in folder EA.Data/Database/database.db <br /><br />
 
+### Client APP
+The client code resident in EA.Web/ClientApp/ folder.<br />
+I used Angulr module's in order to take the advantage of UI lazy-loading.<br />
+I used Angular services for sharing data between components.<br /><br />
 
 ### Code Design:
-From design aspect, although this is a small (very small) system there is a strict separation between the tiers of the system, 
-while incoming messages from outside handling representing with ViewModel's and pass to the domain tier through the service tier.<br /><br />
+From design aspect, although this is a small (very small) system there is a strict separation between the tiers of the system, where each tier responsible for his phase, for example, incoming messages from outside will handle in API (middlewhere) pase by API controller's, the controllers doesn't know about the Entities in the system, each Entity represented by ViewModel's (DTO's), the Service tier responsible to convert ViewModel to Entity and pass to the Data (DAL) tier
+
+domain tier through the service tier.<br /><br />
 
 Use of SOLID principles and design pattern such as: Dependency Injection, Decorators, Repository, Open/Close, 
 Interface segregation and Dependency Inversion principles<br /><br />
